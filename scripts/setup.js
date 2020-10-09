@@ -41,7 +41,7 @@ const DOWNLOAD_HISTORY_MESSAGE = `Download the entire history of terms of servic
       await git.clone(config.get('history.publicSnapshotsRepository'), config.get('history.snapshotsPath'));
     }
 
-    console.log('Database initialized.');
+    console.log('Database initialized.')
   } catch (e) {
     console.log(e);
   }
