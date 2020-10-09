@@ -8,9 +8,10 @@ import sinonChai from 'sinon-chai';
 import CGUs, { AVAILABLE_EVENTS } from './index.js';
 import { SNAPSHOTS_PATH, VERSIONS_PATH } from './history/index.js';
 import { resetGitRepository, gitVersion, gitSnapshot } from '../../test/helper.js';
+import { fileURLToPath } from 'url';
 
 const fs = fsApi.promises;
-const __dirname = path.dirname(new URL(import.meta.url).pathname);
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 chai.use(sinonChai);
 const { expect } = chai;
 
