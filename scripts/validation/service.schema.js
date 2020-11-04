@@ -59,7 +59,7 @@ const schema = {
       properties: {
         fetch: {
           type: 'string',
-          pattern: '^https?://.+\.[pP][dD][fF]$',
+          pattern: '^https?://.+\.[pP][dD][fF](\\?.+)?$',
           description: 'The URL where the document can be found'
         },
       },
@@ -116,6 +116,10 @@ const schema = {
               }
             }
           ]
+        },
+        executeClientScripts: {
+          type: 'boolean',
+          description: 'Execute client-side JavaScript loaded by the document before accessing the content, in case the DOM modifications are needed to access the content.',
         }
       }
     },

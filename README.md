@@ -91,8 +91,9 @@ We provide a database of snapshots recorded each time there is a change in the t
 
 See [CONTRIBUTING](CONTRIBUTING.md).
 
-
 ## Using locally
+
+> **Windows Support**: This module can run locally on Windows systems.
 
 ### Installing
 
@@ -132,6 +133,9 @@ The default configuration can be read and changed in `config/default.json`.
       "name": "Name to which changes in tracked documents will be credited",
       "email": "Email to which changes in tracked documents will be credited"
     }
+  },
+  "fetcher": {
+    "waitForElementsTimeout": "Maximum time (in milliseconds) to wait for elements to be present in the page when fetching document in a headless browser",
   },
   "notifier": {
     "sendInBlue": {
@@ -218,7 +222,7 @@ To get the latest version of a specific service's terms:
 npm start $service_id
 ```
 
-> The service id is the case sensitive name of the service declaration file without the extension. For example, for `Twitter.json`, the service id is `Twitter`.
+> The service ID is the case sensitive name of the service declaration file without the extension. For example, for `Twitter.json`, the service ID is `Twitter`.
 
 ### Deploying
 
